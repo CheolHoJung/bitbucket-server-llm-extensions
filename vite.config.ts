@@ -14,9 +14,9 @@ export default defineConfig({
     react(),
     webExtension({
       // Path to your manifest.json (source file)
-      manifest: resolvePath("src/manifest.json"),
+      manifest: resolvePath("src/manifest.json"), //
       // Watch manifest.json for changes to trigger rebuilds
-      watchFilePaths: [resolvePath("src/manifest.json")],
+      watchFilePaths: [resolvePath("src/manifest.json")], //
       // We are not using disableAutoInputs, allowing the plugin
       // to process manifest entries like options.html, popup.html, and background.service_worker.
     }),
@@ -36,28 +36,5 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true, // Clean the output directory before each build
-    rollupOptions: {
-      // Explicitly define all your main TS/TSX entry points
-      // This helps ensure they are built with the output options below.
-      input: {
-        // The keys (e.g., 'src/background/main') will be used by
-        // output.entryFileNames to create the path structure in 'dist'.
-        'src/background/main': resolvePath('src/background/main.ts'),
-        'src/content/content': resolvePath('src/content/content.tsx'),
-        'src/options/main': resolvePath('src/options/main.tsx'), // JS/TS entry for your options.html
-        'src/popup/main': resolvePath('src/popup/main.tsx'),   // JS/TS entry for your popup.html (if you use one)
-      },
-      output: {
-        // Defines the output format for the JavaScript files
-        entryFileNames: `[name].js`, // e.g., dist/src/background/main.js
-        chunkFileNames: `assets/[name]-[hash].js`, // For code-split chunks
-        assetFileNames: `assets/[name]-[hash].[ext]`, // For other assets like CSS, images
-        
-        inlineDynamicImports: false, // Required for code-splitting with multiple entry points
-        format: 'es', // Crucial: Output all as ES modules
-      },
-    },
-    sourcemap: 'inline', // For easier debugging during development
-                         // Change to 'hidden-source-map' or false for production
   },
 });

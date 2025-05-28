@@ -1,0 +1,80 @@
+{
+  "extensionName": {
+    "message": "빗버킷 LLM 도우미",
+    "description": "The name of the extension."
+  },
+  "explainButtonText": {
+    "message": "코드 설명 요청 🤖",
+    "description": "Text for the 'Explain Code' button."
+  },
+  "explanationBoxTitle": {
+    "message": "코드 설명",
+    "description": "Title for the code explanation box."
+  },
+  "loadingMessage": {
+    "message": "AI가 코드를 분석 중입니다...",
+    "description": "Message shown while AI is processing."
+  },
+  "errorApiKeyMissing": {
+    "message": "OpenRouter API 키가 설정되지 않았습니다. 확장 프로그램 옵션 페이지에서 설정해주세요.",
+    "description": "Error message when API key is missing."
+  },
+  "errorExplanationFailed": {
+    "message": "설명 생성 실패: $details$",
+    "description": "Error message when explanation generation fails. $details$ will be replaced by the specific error.",
+    "placeholders": {
+      "details": {
+        "content": "$1",
+        "example": "알 수 없는 오류"
+      }
+    }
+  },
+  "errorEmptyResponse": {
+    "message": "AI로부터 설명을 받지 못했습니다. 응답이 비어있습니다.",
+    "description": "Error message when AI response is empty."
+  },
+  "errorCommFailed": {
+    "message": "백그라운드 스크립트와 통신할 수 없습니다.",
+    "description": "Error message for communication failure with background script."
+  },
+  "errorNoResponse": {
+    "message": "백그라운드 스크립트로부터 유효한 응답을 받지 못했습니다.",
+    "description": "Error message when no valid response from background."
+  },
+  "optionsTitle": {
+    "message": "빗버킷 LLM 도우미 설정",
+    "description": "Title for the options page."
+  },
+  "optionsBitbucketUrlLabel": {
+    "message": "Bitbucket Server URL:",
+    "description": "Label for Bitbucket URL input."
+  },
+  "optionsApiKeyLabel": {
+    "message": "OpenRouter API Key:",
+    "description": "Label for API Key input."
+  },
+  "optionsModelLabel": {
+    "message": "사용할 LLM 모델:",
+    "description": "Label for LLM model select."
+  },
+  "optionsSaveButton": {
+    "message": "설정 저장",
+    "description": "Text for save settings button."
+  },
+  "optionsStatusSuccess": {
+    "message": "설정이 저장되었고, 권한이 승인되었습니다!",
+    "description": "Success status message on options page."
+  },
+  "optionsErrorInvalidUrl": {
+    "message": "유효한 URL을 입력해주세요 (http:// 또는 https:// 로 시작).",
+    "description": "Error for invalid URL on options page."
+  },
+  "optionsErrorApiKeyRequired": {
+    "message": "OpenRouter API 키를 입력해주세요.",
+    "description": "Error for missing API key on options page."
+  },
+  "optionsErrorPermissionDenied": {
+    "message": "오류: Bitbucket URL 접근 권한이 거부되었습니다. 권한을 허용해야 확장 프로그램이 작동합니다.",
+    "description": "Error when host permission is denied."
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "extensionName": {
+    "message": "Bitbucket LLM Assistant",
+    "description": "The name of the extension."
+  },
+  "explainButtonText": {
+    "message": "Explain Code 🤖",
+    "description": "Text for the 'Explain Code' button."
+  },
+  "explanationBoxTitle": {
+    "message": "Code Explanation",
+    "description": "Title for the code explanation box."
+  },
+  "loadingMessage": {
+    "message": "AI is analyzing the code...",
+    "description": "Message shown while AI is processing."
+  },
+  "errorApiKeyMissing": {
+    "message": "OpenRouter API Key is not set. Please set it in the extension options page.",
+    "description": "Error message when API key is missing."
+  },
+  "errorExplanationFailed": {
+    "message": "Failed to generate explanation: $details$",
+    "description": "Error message when explanation generation fails. $details$ will be replaced by the specific error.",
+    "placeholders": {
+      "details": {
+        "content": "$1",
+        "example": "Unknown error"
+      }
+    }
+  },
+  "errorEmptyResponse": {
+    "message": "AI did not provide an explanation. The response was empty.",
+    "description": "Error message when AI response is empty."
+  },
+  "errorCommFailed": {
+    "message": "Could not communicate with the background script.",
+    "description": "Error message for communication failure with background script."
+  },
+  "errorNoResponse": {
+    "message": "Did not receive a valid response from the background script.",
+    "description": "Error message when no valid response from background."
+  },
+  "optionsTitle": {
+    "message": "Bitbucket LLM Assistant Settings",
+    "description": "Title for the options page."
+  },
+  "optionsBitbucketUrlLabel": {
+    "message": "Bitbucket Server URL:",
+    "description": "Label for Bitbucket URL input."
+  },
+  "optionsApiKeyLabel": {
+    "message": "OpenRouter API Key:",
+    "description": "Label for API Key input."
+  },
+  "optionsModelLabel": {
+    "message": "LLM Model to use:",
+    "description": "Label for LLM model select."
+  },
+  "optionsSaveButton": {
+    "message": "Save Settings",
+    "description": "Text for save settings button."
+  },
+  "optionsStatusSuccess": {
+    "message": "Settings saved and permissions granted!",
+    "description": "Success status message on options page."
+  },
+  "optionsErrorInvalidUrl": {
+    "message": "Please enter a valid URL (starting with http:// or https://).",
+    "description": "Error for invalid URL on options page."
+  },
+  "optionsErrorApiKeyRequired": {
+    "message": "Please enter your OpenRouter API Key.",
+    "description": "Error for missing API key on options page."
+  },
+  "optionsErrorPermissionDenied": {
+    "message": "Error: Permission to access the Bitbucket URL was denied. The extension requires this permission to function.",
+    "description": "Error when host permission is denied."
+  }
+}

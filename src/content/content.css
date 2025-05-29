@@ -1,16 +1,16 @@
 #bitbucket-llm-assistant-root .explain-button {
     position: absolute;
     z-index: 10000;
-    background: #007bff; /* 더 선명한 파란색 */
+    background: #007bff;
     color: white;
     border: none;
-    border-radius: 5px; /* 약간 둥글게 */
-    padding: 6px 12px; /* 패딩 조정 */
+    border-radius: 5px;
+    padding: 6px 12px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-    font-size: 13px; /* 폰트 크기 */
+    font-size: 13px;
     font-weight: bold;
-    white-space: nowrap; /* 줄바꿈 방지 */
+    white-space: nowrap;
     transition: background-color 0.2s ease;
 }
 
@@ -41,7 +41,7 @@
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 16px;
-    color: #172B4D; /* Bitbucket 느낌의 색상 */
+    color: #172B4D;
     font-weight: 600;
 }
 
@@ -60,7 +60,7 @@
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 13px;
     color: #333;
-    max-height: 250px; /* pre 영역 스크롤 추가 */
+    max-height: 250px;
     overflow-y: auto;
 }
 
@@ -82,7 +82,7 @@
 }
 
 #bitbucket-llm-assistant-root .explanation-box .error-text {
-    color: #de350b; /* Atlassian 느낌의 오류 색상 */
+    color: #de350b;
     font-weight: bold;
     background-color: #ffebe6;
     padding: 10px;
@@ -92,4 +92,53 @@
 
 #bitbucket-llm-assistant-root .explanation-box p {
     margin: 10px 0;
+}
+
+#bitbucket-llm-assistant-root .explanation-box .markdown-body {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#bitbucket-llm-assistant-root .explanation-box .markdown-body p {
+    margin-bottom: 10px;
+}
+
+#bitbucket-llm-assistant-root .explanation-box .markdown-body ul,
+#bitbucket-llm-assistant-root .explanation-box .markdown-body ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+#bitbucket-llm-assistant-root .explanation-box .markdown-body li {
+    margin-bottom: 5px;
+}
+
+#bitbucket-llm-assistant-root .explanation-box .markdown-body code {
+    background-color: #f0f0f0;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 3px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+#bitbucket-llm-assistant-root .explanation-box .markdown-body pre {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 13px;
+    color: #333;
+    max-height: none;
+}
+
+#bitbucket-llm-assistant-root .explanation-box .markdown-body pre code {
+    background-color: transparent;
+    padding: 0;
+    font-size: inherit;
+}
+
+#bitbucket-llm-assistant-root .explanation-box .markdown-body strong,
+#bitbucket-llm-assistant-root .explanation-box .markdown-body b {
+    font-weight: 600;
 }

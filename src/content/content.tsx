@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
-import './content.css'; // Make sure this CSS file exists and contains necessary styles
+import './content.css';
+import { marked } from 'marked';
+import DOMPurify from 'dompurify';
+
 
 // --- Debounce Utility Function ---
 // Delays function execution until after a certain time has passed without new calls.
@@ -61,14 +64,27 @@ if (window.bitbucketLLMAssistantLoaded) {
             return null; // Render nothing if there's nothing to show
         }
 
+        // Function to create sanitized markup from markdown string
+        const createSanitizedMarkup = (markdownText: string | null) => {
+            if (!markdownText) return { __html: '' };
+            const rawHtml = marked.parse(markdownText, { gfm: true, breaks: true }) as string; //
+            const sanitizedHtml = DOMPurify.sanitize(rawHtml);
+            return { __html: sanitizedHtml };
+        };
+
         return (
-            <div className="explanation-box"> {/* Styled via content.css */}
+            <div className="explanation-box">
                 <button className="close-button" onClick={onClose}>×</button>
                 <h4>{chrome.i18n.getMessage("explanationBoxTitle")}</h4>
                 <hr />
                 {isLoading && <p>{chrome.i18n.getMessage("loadingMessage")}</p>}
                 {error && <p className="error-text">{error}</p>}
-                {explanation && <pre>{explanation}</pre>}
+                {explanation && (
+                    <div
+                        className="markdown-body"
+                        dangerouslySetInnerHTML={createSanitizedMarkup(explanation)}
+                    />
+                )}
             </div>
         );
     };

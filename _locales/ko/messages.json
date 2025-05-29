@@ -76,5 +76,19 @@
   "optionsErrorPermissionDenied": {
     "message": "오류: Bitbucket URL 접근 권한이 거부되었습니다. 권한을 허용해야 확장 프로그램이 작동합니다.",
     "description": "Error when host permission is denied."
+  },
+  "aiSystemPrompt": {
+    "message": "당신은 코드 스니펫을 명확하고 간결하게 설명하는 도움이 되는 어시스턴트입니다.",
+    "description": "System prompt for the AI defining its role."
+  },
+  "aiUserPromptInstruction": {
+    "message": "다음 코드 스니펫을 한국어로 설명해주세요:\n\n```\n$code$\n```\n\n설명은 반드시 한국어로 작성해야 합니다.",
+    "description": "User prompt instruction asking for code explanation, $code$ is the placeholder for the code snippet.",
+    "placeholders": {
+      "code": {
+        "content": "$1",
+        "example": "public class Main { ... }"
+      }
+    }
   }
 }
